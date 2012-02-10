@@ -2,7 +2,9 @@ Source: kde-gtk-config
 Section: kde
 Priority: optional
 Maintainer: Boris Pek <tehnick-8@mail.ru>
-Build-Depends: debhelper (>= 7.0), cmake
+Build-Depends: debhelper (>= 7.0), cmake, zlib1g-dev,
+ kdelibs5-dev, libqt4-dev, qt4-dev-tools, qt4-qtconfig,
+ libgtk2.0-dev, libcairo2-dev, libgtk-3-dev
 Homepage: https://projects.kde.org/projects/playground/base/kde-gtk-config
 Vcs-Git: git://github.com/tehnick/kde-gtk-config-debian.git
 Vcs-Browser: https://github.com/tehnick/kde-gtk-config-debian
@@ -11,12 +13,11 @@ Standards-Version: 3.9.2
 Package: kde-gtk-config
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: GTK2 and GTK3 Configurator for KDE
- The tool integrates itself into the KDE System Settings --> Appearance pane,
- and let's you easily customise GTK2 and GTK3 theming under KDE:
-  - Choose which theme is used for GTK2 and GTK3 applications
-  - Specify whether menus show or hide icons/text
-  - Choose  icon theme for GTK applications
-  - Adjust font (if needed)
-  - Lets you browse, download and install new GTK2 and GTK3 themes directly
-    from the dekstop.
+Description: KDE configuration module for GTK+ 2.x and GTK+ 3.x styles selection
+ Configuration dialog to adapt GTK applications appearance to your taste
+ under KDE. Among its many features, it lets you:
+  - Choose which theme is used for GTK2 and GTK3 applications.
+  - Tweak some GTK applications behaviour.
+  - Select what icon theme to use in GTK applications.
+  - Select GTK applications default fonts.
+  - Easily browse and install new GTK2 and GTK3 themes.
