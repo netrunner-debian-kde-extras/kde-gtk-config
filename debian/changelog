@@ -1,4 +1,4 @@
-kde-gtk-config (1.7+git20120101-1) precise; urgency=low
+kde-gtk-config (1.7-1) precise; urgency=low
 
   * Initial release (closes: #659103).
 

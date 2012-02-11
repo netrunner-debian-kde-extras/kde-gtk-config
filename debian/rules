@@ -1,4 +1,15 @@
 #!/usr/bin/make -f
 
+PACKAGE = kde-gtk-config
+PROJECT = kde-gtk-config
+
+CUR_VER = $(shell uscan --dehs | sed -n 's/.*<upstream-version>\(.*\)<\/upstream-version>.*/\1/p')
+
 %:
 	dh $@ --parallel
+
+get-orig-source:
+	wget -4 -c "http://proli.net/meu/netrunner/$(PROJECT)-$(CUR_VER).tar.bz2"
+	mv "$(PROJECT)-$(CUR_VER).tar.bz2" ../"$(PACKAGE)_$(CUR_VER).orig.tar.bz2"
+
+.PHONY: override_dh_auto_test

@@ -1,10 +1,12 @@
-Format: http://anonscm.debian.org/viewvc/dep/web/deps/dep5.mdwn?revision=248
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Debianized-By: Boris Pek <tehnick-8@mail.ru>
 Debianized-Date: Wed, 08 Feb 2012 00:15:14 +0200
 Upstream-Name: KDE GTK CONFIG
 Upstream-Contact: Jose Antonio Sánchez Reynaga <joanzare@gmail.com>
  Aleix Pol Gonzalez <aleixpol@kde.org>
-Source: https://projects.kde.org/projects/playground/base/kde-gtk-config/repository
+Source: https://projects.kde.org/projects/playground/base/kde-gtk-config
+ The orig.tar.bz2 is just renamed upstream tarball (without changes).
+ See section get-orig-source in debian/rules file for details.
 
 Files: *
 Copyright: 2011 Jose Antonio Sánchez Reynaga <joanzare@gmail.com>
