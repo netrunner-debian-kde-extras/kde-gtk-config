@@ -3,18 +3,18 @@ Debianized-By: Boris Pek <tehnick-8@mail.ru>
 Debianized-Date: Wed, 08 Feb 2012 00:15:14 +0200
 Upstream-Name: KDE GTK Configurator
 Upstream-Contact: Jose Antonio Sánchez Reynaga <joanzare@gmail.com>
- Aleix Pol Gonzalez <aleixpol@kde.org>
+ Aleix Pol Gonzalez <aleixpol@blue-systems.com>
 Source: https://projects.kde.org/projects/playground/base/kde-gtk-config
  The orig.tar.bz2 is just renamed upstream tarball (without changes).
  See section get-orig-source in debian/rules file for details.
 
 Files: *
 Copyright: 2011 Jose Antonio Sánchez Reynaga <joanzare@gmail.com>
- 2011 Aleix Pol Gonzalez <aleixpol@kde.org>
+ 2011 Aleix Pol Gonzalez <aleixpol@blue-systems.com>
 License: GPL-3+
 
 Files: gtk3proxies/* gtkproxies/*
-Copyright: 2011 Aleix Pol Gonzalez <aleixpol@kde.org>
+Copyright: 2011 Aleix Pol Gonzalez <aleixpol@blue-systems.com>
 License: GPL-2 or GPL-3+
  This program is free software; you can redistribute it and/or
  modify it under the terms of the GNU General Public License as
@@ -40,7 +40,7 @@ License: GPL-2 or GPL-3+
 
 Files: src/*
 Copyright: 2011 Jose Antonio Sánchez Reynaga <joanzare@gmail.com>
- 2011 Aleix Pol Gonzalez <aleixpol@kde.org>
+ 2011 Aleix Pol Gonzalez <aleixpol@blue-systems.com>
 License: LGPL-2.1 or LGPL-3+
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
