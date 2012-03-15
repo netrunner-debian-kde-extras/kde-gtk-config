@@ -1,2 +1,4 @@
 version=3
-http://proli.net/meu/netrunner/ .*kde-gtk-config-(.+)\.tar\.bz2.*
+opts=pasv \
+  ftp://ftp.kde.org/pub/kde/stable/kde-gtk-config/([\d\.]+)/src/kde-gtk-config-([\d\.]+)\.tar\.bz2 \
+  debian git-import-orig

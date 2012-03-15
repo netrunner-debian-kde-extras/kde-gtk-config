@@ -1,11 +1,5 @@
-kde-gtk-config (2.0-0ppa1~precise1) precise; urgency=low
-
-  * Update to stable release 2.0.
-
- -- Boris Pek <tehnick-8@mail.ru>  Sun, 12 Feb 2012 01:28:34 +0200
-
-kde-gtk-config (1.7-1) precise; urgency=low
+kde-gtk-config (2.0-1) unstable; urgency=low
 
   * Initial release (closes: #659103).
 
- -- Boris Pek <tehnick-8@mail.ru>  Wed, 08 Feb 2012 00:15:14 +0200
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 13 Mar 2012 06:57:17 +0200
