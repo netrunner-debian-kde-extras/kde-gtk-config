@@ -2,15 +2,15 @@ Source: kde-gtk-config
 Section: kde
 Priority: optional
 Maintainer: Boris Pek <tehnick-8@mail.ru>
-Build-Depends: debhelper (>= 7.0), cmake, zlib1g-dev,
- kdelibs5-dev, libqt4-dev, qt4-dev-tools, qt4-qtconfig,
- libgtk2.0-dev, libcairo2-dev, libgtk-3-dev
+Build-Depends: debhelper (>= 8), cmake,
+ kdelibs5-dev, libgtk2.0-dev, libgtk-3-dev
 Homepage: https://projects.kde.org/projects/playground/base/kde-gtk-config
 Vcs-Git: git://github.com/tehnick/kde-gtk-config-debian.git
 Vcs-Browser: https://github.com/tehnick/kde-gtk-config-debian
 Standards-Version: 3.9.3
 
-Package: kde-gtk-config
+Package: kde-config-gtk2-gtk3-styles
+Provides: kde-config-gtk-style
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: KDE configuration module for GTK+ 2.x and GTK+ 3.x styles selection
