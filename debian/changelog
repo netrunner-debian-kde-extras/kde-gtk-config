@@ -1,3 +1,18 @@
+kde-gtk-config (2.0-0ppa2~quantal1) quantal; urgency=low
+
+  * compat level and debhelper version were increased to 8
+  * debian/control was updated:
+    - binary package was renamed to kde-config-gtk2-gtk3-styles
+    - binary package now provides virtual package kde-config-gtk-style
+    - `Build-Depends' section was simplified
+  * debian/rules was updated:
+    - added `uscan' command line options for replacing `mv' command
+    - added useful option (--as-needed) to LDFLAGS
+    - enabled all hardening for build
+  * debian/manpages was simplified.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 14 May 2012 21:56:46 +0300
+
 kde-gtk-config (2.0-0ppa1~precise1) precise; urgency=low
 
   * Initial release.
