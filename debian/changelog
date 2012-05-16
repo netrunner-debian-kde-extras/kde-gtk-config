@@ -1,4 +1,4 @@
-kde-gtk-config (2.0-1) unstable; urgency=low
+kde-gtk-config (3:2.0-1) experimental; urgency=low
 
   * Initial release (closes: #659103).
 

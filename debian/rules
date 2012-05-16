@@ -1,10 +1,18 @@
 #!/usr/bin/make -f
 
-export DEB_BUILD_MAINT_OPTIONS=hardening=+all
-export LDFLAGS:=-Wl,--as-needed $(LDFLAGS)
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/buildflags.mk
+
+CFLAGS+=$(CPPFLAGS)
+CXXFLAGS+=$(CPPFLAGS)
 
 %:
 	dh $@ --parallel
 
 get-orig-source:
 	uscan --noconf --verbose --force-download --rename --download-current-version --destdir=..
+
+.PHONY: override_dh_auto_test
