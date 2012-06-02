@@ -1,0 +1,26 @@
+Description: Delete digit 4 from the name of configuration file
+ Patch just changes symlink from ~/.gtkrc-2.0-kde4 to ~/.gtkrc-2.0-kde
+ Real configuration file is ~/.gtkrc-2.0, so it does not matter.
+Author: Boris Pek <tehnick-8@mail.ru>
+Last-Update: 2012-06-02
+
+--- a/src/appearancegtk2.cpp
++++ b/src/appearancegtk2.cpp
+@@ -122,13 +122,13 @@
+     gtkrc.close();
+     
+     //TODO: do we really need the linked file?
+-    if(QFile::remove(gtkrcFile+"-kde4"))
++    if(QFile::remove(gtkrcFile+"-kde"))
+         kDebug() << "ready to create the symbolic link";
+     
+-    if( !QFile::link(gtkrcFile, gtkrcFile+"-kde4") )
+-        kDebug() << "Couldn't create the symboling link to .gtkrc-2.0-kde4 :(";
++    if( !QFile::link(gtkrcFile, gtkrcFile+"-kde") )
++        kDebug() << "Couldn't create the symboling link to .gtkrc-2.0-kde :(";
+     else
+-        kDebug() << "Symbolic link created for .gtkrc-2.0-kde4 :D";
++        kDebug() << "Symbolic link created for .gtkrc-2.0-kde :D";
+     
+     if(gtkrcFile==defaultConfigFile())
+         KProcess::startDetached(KStandardDirs::findExe("reload_gtk_apps"));
