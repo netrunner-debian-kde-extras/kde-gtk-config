@@ -1,3 +1,9 @@
+kde-gtk-config (2.0-0ppa3~quantal1) quantal; urgency=low
+
+  * Package for Launchpad was synced with package for Debian.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Wed, 06 Jun 2012 00:06:31 +0300
+
 kde-gtk-config (2.0-0ppa2~quantal1) quantal; urgency=low
 
   * compat level and debhelper version were increased to 8
