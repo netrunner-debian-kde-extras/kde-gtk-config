@@ -1,1 +1,2 @@
 mirgation-from-package-src:kcm-gtk
+fix-build-on-kfreebsd-and-hurd-i386

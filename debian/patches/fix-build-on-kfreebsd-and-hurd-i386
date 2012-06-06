@@ -1,0 +1,15 @@
+Description: Fix build in Debian GNU/kFreeBSD and in Debian GNU/Hurd
+Author: Boris Pek <tehnick-8@mail.ru>
+Last-Update: 2012-06-06
+
+--- a/gtk3proxies/preview3.c
++++ b/gtk3proxies/preview3.c
+@@ -24,8 +24,6 @@
+ #include <stdio.h>
+ #include <assert.h>
+ #include <stdlib.h>
+-
+-#include <sys/inotify.h>
+ #include <string.h>
+ 
+ void printHelp()
