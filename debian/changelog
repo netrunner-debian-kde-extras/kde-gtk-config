@@ -1,3 +1,12 @@
+kde-gtk-config (3:2.0-3) unstable; urgency=low
+
+  * Package moved to unstable after tests: no changes required.
+  * This package replaces src:kcm-gtk and closes its bugs:
+    - fixed working on clean install (Closes: #631591)
+    - added support of Gtk+ 3.x (LP: #734979)
+
+ -- Boris Pek <tehnick-8@mail.ru>  Fri, 08 Jun 2012 07:06:54 +0300
+
 kde-gtk-config (3:2.0-2) experimental; urgency=low
 
   * Added file debian/patches/fix-build-on-kfreebsd-and-hurd-i386:
