@@ -3,9 +3,14 @@ kde-gtk-config (3:2.1-1) unstable; urgency=low
   * Update to stable release 2.1.
   * Deleted file debian/patches/fix-build-on-kfreebsd-and-hurd-i386:
     accepted in upstream.
+  * Added file debian/patches/fix-loading-icons:
+    without this patch KDE-GTK-Config module scans ./ directory if option
+    gtk-icon-theme-name or option gtk-fallback-icon-theme is empty or invalid,
+    now first element from the list of found icon themes is used.
+    (Closes: #678714)
   * Added file debian/patches/ignore-symlinks:
     prevents of possible infinite loop because of circular symlinks.
-    (Closes: #678714)
+    (see #678714)
 
  -- Boris Pek <tehnick-8@mail.ru>  Fri, 29 Jun 2012 01:31:54 +0300
 
