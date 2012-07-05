@@ -1,0 +1,63 @@
+Description: Fix loading icons
+ Without this patch KDE-GTK-Config module scans ./ directory if option
+ gtk-icon-theme-name or option gtk-fallback-icon-theme is empty or invalid.
+ Now first element from the list of found icon themes is used.
+Bug-Debian: http://bugs.debian.org/678714
+Author: Boris Pek <tehnick-8@mail.ru>
+Last-Update: 2012-07-05
+
+--- a/src/gtkconfigkcmodule.cpp
++++ b/src/gtkconfigkcmodule.cpp
+@@ -199,21 +199,26 @@
+ void tryIcon(QLabel* label, const QString& fallback, const QString& theme, const QString& iconName)
+ {
+     label->setToolTip(iconName);
+-    
+-    QString ret = IconThemesModel::findFilesRecursively(QStringList(iconName+".*"), theme);
+-    if(!ret.isEmpty()) {
+-        QPixmap p(ret);
+-        Q_ASSERT(!p.isNull());
+-        label->setPixmap(p);
+-        return;
++    QString ret = "";
++    
++    if (!theme.isEmpty()) {
++        ret = IconThemesModel::findFilesRecursively(QStringList(iconName+".*"), theme);
++        if(!ret.isEmpty()) {
++            QPixmap p(ret);
++            Q_ASSERT(!p.isNull());
++            label->setPixmap(p);
++            return;
++        }
+     }
+     
+-    ret = IconThemesModel::findFilesRecursively(QStringList(iconName+".*"), fallback);
+-    if(!ret.isEmpty()) {
+-        QPixmap p(ret);
+-        Q_ASSERT(!p.isNull());
+-        label->setPixmap(p);
+-        return;
++    if (!fallback.isEmpty()) {
++        ret = IconThemesModel::findFilesRecursively(QStringList(iconName+".*"), fallback);
++        if(!ret.isEmpty()) {
++            QPixmap p(ret);
++            Q_ASSERT(!p.isNull());
++            label->setPixmap(p);
++            return;
++        }
+     }
+     
+     KIcon notFoundIcon("application-x-zerosize");
+@@ -403,8 +403,10 @@
+     //icons
+     QString currentIcon = useConfig ? appareance->getIcon() : ui->cb_icon->currentText(),
+             currentFallback = useConfig ? appareance->getIconFallback() : ui->cb_icon_fallback->currentText();
+-    ui->cb_icon->setCurrentIndex(ui->cb_icon->findData(currentIcon, IconThemesModel::DirNameRole));
+-    ui->cb_icon_fallback->setCurrentIndex(ui->cb_icon_fallback->findData(currentFallback, IconThemesModel::DirNameRole));
++    int currentIconIndex = ui->cb_icon->findData(currentIcon, IconThemesModel::DirNameRole),
++        currentFallbackIndex = ui->cb_icon_fallback->findData(currentFallback, IconThemesModel::DirNameRole);
++    ui->cb_icon->setCurrentIndex(currentIconIndex >= 0 ? currentFallbackIndex : 0);
++    ui->cb_icon_fallback->setCurrentIndex(currentFallbackIndex >= 0 ? currentFallbackIndex : 0);
+     
+     m_saveEnabled = wasenabled;
+ }
