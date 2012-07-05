@@ -1,2 +1,3 @@
 mirgation-from-package-src:kcm-gtk
 ignore-symlinks
+fix-loading-icons
