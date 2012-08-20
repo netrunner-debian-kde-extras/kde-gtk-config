@@ -8,11 +8,8 @@ kde-gtk-config (3:2.1-1) unstable; urgency=low
     gtk-icon-theme-name or option gtk-fallback-icon-theme is empty or invalid,
     now first element from the list of found icon themes is used.
     (Closes: #678714)
-  * Added file debian/patches/ignore-symlinks:
-    prevents of possible infinite loop because of circular symlinks.
-    (see #678714)
 
- -- Boris Pek <tehnick-8@mail.ru>  Fri, 29 Jun 2012 01:31:54 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 21 Aug 2012 00:22:23 +0300
 
 kde-gtk-config (3:2.0-3) unstable; urgency=low
 
