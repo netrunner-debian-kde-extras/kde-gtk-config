@@ -1,3 +1,20 @@
+kde-gtk-config (3:2.1.1-0ppa1~raring1) raring; urgency=low
+
+  * Update to stable release 2.1.1.
+  * Delete debian/patches/fix-loading-icons: now available in upstream.
+  * Add debian/patches/check-gtk-preview-files-in-runtime:
+    check if binary files for previewing Gtk themes are available.
+  * Update debian/control:
+    - add package kde-config-gtk-style-preview
+    - update long description of package kde-config-gtk-style
+    - kde-config-gtk-style recommends kde-config-gtk-style-preview
+  * Rename debian/manpages to debian/kde-config-gtk-style-preview.manpages.
+  * Add files debian/*.install: see above.
+  * Fix get-orig-source section in according with Debian Policy §4.9.
+  * Small fix in debian/watch.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Wed, 07 Nov 2012 00:11:51 +0200
+
 kde-gtk-config (3:2.1-1ppa1~quantal1) quantal; urgency=low
 
   * Package in Launchpad was sync with package in Debian.
