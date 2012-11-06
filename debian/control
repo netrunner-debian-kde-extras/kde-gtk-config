@@ -13,6 +13,7 @@ Standards-Version: 3.9.3
 Package: kde-config-gtk-style
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: kde-config-gtk-style-preview
 Description: KDE configuration module for GTK+ 2.x and GTK+ 3.x styles selection
  Configuration dialog to adapt GTK+ applications appearance to your taste
  under KDE. Among its many features, it lets you:
@@ -21,3 +22,21 @@ Description: KDE configuration module for GTK+ 2.x and GTK+ 3.x styles selection
   - Select what icon theme to use in GTK+ applications.
   - Select GTK+ applications default fonts.
   - Easily browse and install new GTK+ 2.x and GTK+ 3.x themes.
+  .
+  This package contains kde-gtk-config module for KDE System Settings and
+  common files (icons, localization files and etc).
+
+Package: kde-config-gtk-style-preview
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: KDE configuration module for GTK+ 2.x and GTK+ 3.x styles selection (extras)
+ Configuration dialog to adapt GTK+ applications appearance to your taste
+ under KDE. Among its many features, it lets you:
+  - Choose which theme is used for GTK+ 2.x and GTK+ 3.x applications.
+  - Tweak some GTK+ applications behaviour.
+  - Select what icon theme to use in GTK+ applications.
+  - Select GTK+ applications default fonts.
+  - Easily browse and install new GTK+ 2.x and GTK+ 3.x themes.
+  .
+  This package contains binary files for previewing Gtk themes and applying
+  them without restarting of Gtk applications.
