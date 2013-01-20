@@ -1,9 +1,9 @@
-kde-gtk-config (3:2.1.1-1ppa1~raring1) raring; urgency=low
+kde-gtk-config (3:2.1.1-1ppa2~raring1) raring; urgency=low
 
   * Package in Launchpad was sync with package in Debian.
   * Changelog was cleaned.
 
- -- Boris Pek <tehnick-8@mail.ru>  Sun, 20 Jan 2013 14:03:07 +0200
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 20 Jan 2013 15:42:05 +0200
 
 kde-gtk-config (3:2.1.1-1) experimental; urgency=low
 
