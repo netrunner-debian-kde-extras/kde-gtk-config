@@ -5,10 +5,10 @@ Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
 Uploaders: Boris Pek <tehnick-8@mail.ru>
 Build-Depends: debhelper (>= 8), cmake,
  kdelibs5-dev, pkg-kde-tools, libgtk2.0-dev, libgtk-3-dev
-Homepage: https://projects.kde.org/projects/playground/base/kde-gtk-config
+Homepage: https://projects.kde.org/projects/extragear/base/kde-gtk-config
 Vcs-Git: git://github.com/tehnick/kde-gtk-config-debian.git
 Vcs-Browser: https://github.com/tehnick/kde-gtk-config-debian
-Standards-Version: 3.9.3
+Standards-Version: 3.9.4
 
 Package: kde-config-gtk-style
 Architecture: any
@@ -30,7 +30,7 @@ Package: kde-config-gtk-style-preview
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Recommends: kde-config-gtk-style
-Breaks: kde-config-gtk-style (<< 3:2.1.1-1~exp1)
+Breaks: kde-config-gtk-style (<< 3:2.1.1-1~exp1~)
 Description: KDE configuration module for GTK+ 2.x and GTK+ 3.x styles selection (extras)
  Configuration dialog to adapt GTK+ applications appearance to your taste
  under KDE. Among its many features, it lets you:

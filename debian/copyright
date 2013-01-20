@@ -4,7 +4,7 @@ Debianized-Date: Wed, 08 Feb 2012 00:15:14 +0200
 Upstream-Name: KDE GTK Configurator
 Upstream-Contact: Jose Antonio Sánchez Reynaga <joanzare@gmail.com>
  Aleix Pol Gonzalez <aleixpol@blue-systems.com>
-Source: https://projects.kde.org/projects/playground/base/kde-gtk-config
+Source: https://projects.kde.org/projects/extragear/base/kde-gtk-config
  The orig.tar.bz2 is just renamed upstream tarball (without changes).
  See section get-orig-source in debian/rules file for details.
 
