@@ -29,6 +29,8 @@ Description: KDE configuration module for GTK+ 2.x and GTK+ 3.x styles selection
 Package: kde-config-gtk-style-preview
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: kde-config-gtk-style
+Breaks: kde-config-gtk-style (<< 3:2.1.1-1~exp1)
 Description: KDE configuration module for GTK+ 2.x and GTK+ 3.x styles selection (extras)
  Configuration dialog to adapt GTK+ applications appearance to your taste
  under KDE. Among its many features, it lets you:
