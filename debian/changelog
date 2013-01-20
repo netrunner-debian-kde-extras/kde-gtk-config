@@ -1,3 +1,13 @@
+kde-gtk-config (3:2.1.1-1) experimental; urgency=low
+
+  * Update debian/control:
+    - package kde-config-gtk-style-preview now breaks old package
+      kde-config-gtk-style (Closes: #698285)
+    - package kde-config-gtk-style-preview now recommends package
+      kde-config-gtk-style
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 20 Jan 2013 12:35:04 +0200
+
 kde-gtk-config (3:2.1.1-1~exp1) experimental; urgency=low
 
   * Update to stable release 2.1.1.
