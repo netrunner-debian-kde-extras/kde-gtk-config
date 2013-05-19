@@ -1,4 +1,5 @@
-usr/lib
+usr/lib/kde4/kcm_cgc.so
+usr/lib/kde4/libexec/reload_gtk_apps
 usr/share/icons
 usr/share/kde4
 usr/share/locale
