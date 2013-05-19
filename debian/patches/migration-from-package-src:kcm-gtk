@@ -1,4 +1,4 @@
-Description: Mirgation from package src:kcm-gtk
+Description: Migration from package src:kcm-gtk
  This patch provides smooth migration from package src:kcm-gtk to new
  package src:kde-gtk-config. Old configuration file ~/.gtkrc-2.0-kde
  is moved to ~/.gtkrc-2.0.
