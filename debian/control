@@ -6,8 +6,8 @@ Uploaders: Boris Pek <tehnick-8@mail.ru>
 Build-Depends: debhelper (>= 8), cmake,
  kdelibs5-dev, pkg-kde-tools, libgtk2.0-dev, libgtk-3-dev
 Homepage: https://projects.kde.org/projects/extragear/base/kde-gtk-config
-Vcs-Git: git://github.com/tehnick/kde-gtk-config-debian.git
-Vcs-Browser: https://github.com/tehnick/kde-gtk-config-debian
+Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-gtk-config.git
+Vcs-Browser: http://anonscm.debian.org/git/pkg-kde/kde-extras/kde-gtk-config.git
 Standards-Version: 3.9.4
 
 Package: kde-config-gtk-style
