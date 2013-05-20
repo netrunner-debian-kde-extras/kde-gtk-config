@@ -1,0 +1,44 @@
+Description: Fix loading of config options
+Bug-Debian: http://bugs.debian.org/708169
+Author: Boris Pek <tehnick-8@mail.ru>
+Last-Update: 2013-05-20
+Forwarded: no
+
+--- a/src/abstractappearance.cpp
++++ b/src/abstractappearance.cpp
+@@ -48,7 +48,8 @@
+ {
+     QMap<QString, QString> ret;
+     QTextStream flow(device);
+-    for(QString line = flow.readLine(); !flow.atEnd(); line = flow.readLine()) {
++    for(QString line = flow.readLine(); !flow.atEnd(); ) {
++        line = flow.readLine();
+         if(valueRx.exactMatch(line))
+             ret[valueRx.cap(1)] = valueRx.cap(2);
+         else if(line.startsWith("include \"")) {
+--- a/src/appearancegtk2.cpp
++++ b/src/appearancegtk2.cpp
+@@ -108,8 +108,8 @@
+     flow << "gtk-icon-theme-name=\""<< m_settings["icon"] << "\"\n";
+     flow << "gtk-fallback-icon-theme=\"" << m_settings["icon_fallback"] << "\"\n";
+     flow << "gtk-toolbar-style=" << m_settings["toolbar_style"] << "\n";
+-    flow << "gtk-menu-images=" << m_settings["show_icons_buttons"] << "\n";
+-    flow << "gtk-button-images=" << m_settings["show_icons_menus"] << "\n";
++    flow << "gtk-menu-images=" << m_settings["show_icons_menus"] << "\n";
++    flow << "gtk-button-images=" << m_settings["show_icons_buttons"] << "\n";
+     
+     //we're done with the  ~/.gtk-2.0 file
+     gtkrc.close();
+--- a/src/appearancegtk3.cpp
++++ b/src/appearancegtk3.cpp
+@@ -69,8 +69,8 @@
+     flow3 << "gtk-icon-theme-name="<< m_settings["icon"] << "\n";
+     flow3 << "gtk-fallback-icon-theme=" << m_settings["icon_fallback"] << "\n";
+     flow3 << "gtk-toolbar-style=" << m_settings["toolbar_style"] << "\n";
+-    flow3 << "gtk-menu-images=" << m_settings["show_icons_buttons"] << "\n";
+-    flow3 << "gtk-button-images=" << m_settings["show_icons_menus"] << "\n";
++    flow3 << "gtk-menu-images=" << m_settings["show_icons_menus"] << "\n";
++    flow3 << "gtk-button-images=" << m_settings["show_icons_buttons"] << "\n";
+     
+     return true;
+ }

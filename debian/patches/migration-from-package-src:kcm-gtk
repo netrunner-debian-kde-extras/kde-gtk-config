@@ -3,7 +3,7 @@ Description: Migration from package src:kcm-gtk
  package src:kde-gtk-config. Old configuration file ~/.gtkrc-2.0-kde
  is moved to ~/.gtkrc-2.0.
 Author: Boris Pek <tehnick-8@mail.ru>
-Last-Update: 2012-06-04
+Last-Update: 2013-05-19
 
 --- a/src/gtkconfigkcmodule.cpp
 +++ b/src/gtkconfigkcmodule.cpp
