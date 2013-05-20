@@ -10,7 +10,7 @@ kde-gtk-config (3:2.2.1-1) unstable; urgency=low
     - debian/gtk_preview.1
     - debian/kde-config-gtk-style-preview.manpages
     - debian/reload_gtk_apps.1
-    these binary files were moved from /usr/bin to usr/lib/kde4
+    these binary files were moved from /usr/bin to /usr/lib/kde4
     so manpages are not required anymore.
   * Rename debian/patches/mirgation-from-package-src:kcm-gtk
     to debian/patches/migration-from-package-src:kcm-gtk and
@@ -19,12 +19,14 @@ kde-gtk-config (3:2.2.1-1) unstable; urgency=low
     kde-config-gtk-style-preview (instead of recommends)
     because now binary file reload_gtk_apps is in package
     kde-config-gtk-style.
+  * Add debian/patches/fix-loading-config-options:
+    fix loading of config options. (Closes: #708169)
   * Update Vcs-* fields in debian/control:
     git repo was moved from GitHub to Alioth.
   * Update debian/copyright.
   * Update debian/watch.
 
- -- Boris Pek <tehnick-8@mail.ru>  Mon, 20 May 2013 00:28:16 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 20 May 2013 22:17:54 +0300
 
 kde-gtk-config (3:2.1.1-1) experimental; urgency=low
 
