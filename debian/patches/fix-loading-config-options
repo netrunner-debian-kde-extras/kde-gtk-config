@@ -1,7 +1,7 @@
 Description: Fix loading of config options
 Bug-Debian: http://bugs.debian.org/708169
 Author: Boris Pek <tehnick-8@mail.ru>
-Last-Update: 2013-05-20
+Last-Update: 2013-05-21
 Forwarded: no
 
 --- a/src/abstractappearance.cpp
@@ -11,7 +11,7 @@ Forwarded: no
      QMap<QString, QString> ret;
      QTextStream flow(device);
 -    for(QString line = flow.readLine(); !flow.atEnd(); line = flow.readLine()) {
-+    for(QString line = flow.readLine(); !flow.atEnd(); ) {
++    for(QString line; !flow.atEnd(); ) {
 +        line = flow.readLine();
          if(valueRx.exactMatch(line))
              ret[valueRx.cap(1)] = valueRx.cap(2);
