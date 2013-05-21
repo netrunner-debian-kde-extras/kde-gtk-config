@@ -1,0 +1,33 @@
+Description: Fix errors in desktop file
+ There are such errors in original desktop file:
+ 1) kde-gtk-config.desktop: hint: value "Qt;KDE;X-KDE-settings-looknfeel;" for
+    key "Categories" in group "Desktop Entry" does not contain a registered
+    main category; application might only show up in a "catch-all" section of
+    the application menu
+ 2) kde-gtk-config.desktop: error: key "Categories" is present in group
+    "Desktop Entry", but the type is "Service" while this key is only valid
+    for type "Application"
+ 3) kde-gtk-config.desktop: error: key "Exec" is present in group "Desktop
+    Entry", but the type is "Service" while this key is only valid for type
+    "Application"
+ Use desktop-file-validate tool to check.
+Author: Boris Pek <tehnick-8@mail.ru>
+Last-Update: 2013-05-21
+Forwarded: no
+
+--- a/kde-gtk-config.desktop
++++ b/kde-gtk-config.desktop
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Categories=Qt;KDE;X-KDE-settings-looknfeel;
+ Comment=Configuration of the style of GTK applications
+ Comment[ca]=Configuració de l'estil de les aplicacions GTK
+ Comment[cs]=Nastavení stylu aplikací GTK
+@@ -32,7 +31,6 @@
+ Comment[x-test]=xxConfiguration of the style of GTK applicationsxx
+ Comment[zh_CN]=GTK 应用程序风格配置
+ Comment[zh_TW]=設定 GTK 應用程式的樣式
+-Exec=kcmshell4 kde-gtk-config
+ Icon=kde-gtk-config
+ Name=GTK
+ Name[ca]=GTK

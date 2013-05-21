@@ -1,2 +1,3 @@
 migration-from-package-src:kcm-gtk
 fix-loading-config-options
+fix-desktop-file
