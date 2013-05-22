@@ -1,4 +1,4 @@
-Description: Fix errors in desktop file
+Description: Fix desktop file
  There are such errors in original desktop file:
  1) kde-gtk-config.desktop: hint: value "Qt;KDE;X-KDE-settings-looknfeel;" for
     key "Categories" in group "Desktop Entry" does not contain a registered
@@ -11,6 +11,11 @@ Description: Fix errors in desktop file
     Entry", but the type is "Service" while this key is only valid for type
     "Application"
  Use desktop-file-validate tool to check.
+ .
+ Also there is a strange bug with displaying icon in KDE 4.8.4 and
+ SystemSettings 1.0: if icon name begins from "kde-" then K-menu icon is shown
+ no matter what characters are in the end. That is why kde-gtk-config is
+ renamed to gtkconfig.
 Author: Boris Pek <tehnick-8@mail.ru>
 Last-Update: 2013-05-21
 Forwarded: no
@@ -23,11 +28,13 @@ Forwarded: no
  Comment=Configuration of the style of GTK applications
  Comment[ca]=Configuració de l'estil de les aplicacions GTK
  Comment[cs]=Nastavení stylu aplikací GTK
-@@ -32,7 +31,6 @@
+@@ -33,8 +32,7 @@
  Comment[x-test]=xxConfiguration of the style of GTK applicationsxx
  Comment[zh_CN]=GTK 应用程序风格配置
  Comment[zh_TW]=設定 GTK 應用程式的樣式
 -Exec=kcmshell4 kde-gtk-config
- Icon=kde-gtk-config
+-Icon=kde-gtk-config
++Icon=gtkconfig
  Name=GTK
  Name[ca]=GTK
+ Name[cs]=GTK
