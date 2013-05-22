@@ -22,13 +22,16 @@ kde-gtk-config (3:2.2.1-1) unstable; urgency=low
   * Add debian/patches/fix-loading-config-options:
     fix loading of config options. (Closes: #708169)
   * Add debian/patches/fix-desktop-file:
-    fix errors in desktop file.
+    - fix errors in desktop file
+    - use icon name gtkconfig instead of kde-gtk-config
+  * Update debian/rules:
+    rename icon kde-gtk-config.png to gtkconfig.png
   * Update Vcs-* fields in debian/control:
     git repo was moved from GitHub to Alioth.
   * Update debian/copyright.
   * Update debian/watch.
 
- -- Boris Pek <tehnick-8@mail.ru>  Tue, 21 May 2013 14:37:18 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Thu, 23 May 2013 02:05:43 +0300
 
 kde-gtk-config (3:2.1.1-1) experimental; urgency=low
 
