@@ -1,3 +1,9 @@
+kde-gtk-config (3:2.2.1-1~bpo70+1) wheezy-backports; urgency=low
+
+  * Rebuild for wheezy-backports.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 03 Jun 2013 22:42:40 +0300
+
 kde-gtk-config (3:2.2.1-1) unstable; urgency=low
 
   * Update to stable release 2.2.1.
